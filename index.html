@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our online courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Основной блок каталога курсов -->
+    <main class="catalog">
+        <!-- Декоративные элементы (точки, квадраты) -->
+        <div class="catalog__decor catalog__decor--dots" aria-hidden="true"></div>
+        <div class="catalog__decor catalog__decor--squares" aria-hidden="true">
+            <div class="catalog__square"></div>
+            <div class="catalog__square"></div>
+            <div class="catalog__square"></div>
+            <div class="catalog__square"></div>
+        </div>
+        <div class="catalog__decor catalog__decor--right-squares" aria-hidden="true"></div>
+
+        <!-- Контейнер с контентом -->
+        <div class="catalog__container">
+
+            <!-- Заголовок секции -->
+            <header class="catalog__header">
+                <div class="catalog__subtitle">Enjoy your studying!</div>
+                <h1 class="catalog__title">Our online courses</h1>
+            </header>
+
+            <!-- Блок управления: фильтры и поиск -->
+            <div class="controls">
+                <!-- Кнопки фильтрации по категориям -->
+                <div class="controls__filters">
+                    <button class="filter filter--active" data-category="all" type="button">
+                        <span class="filter__text">All</span>
+                        <span class="filter__count">17</span>
+                    </button>
+                    <button class="filter" data-category="marketing" type="button">
+                        <span class="filter__text">Marketing</span>
+                        <span class="filter__count">4</span>
+                    </button>
+                    <button class="filter" data-category="management" type="button">
+                        <span class="filter__text">Management</span>
+                        <span class="filter__count">3</span>
+                    </button>
+                    <button class="filter" data-category="hr" type="button">
+                        <span class="filter__text">HR & Recruting</span>
+                        <span class="filter__count">5</span>
+                    </button>
+                    <button class="filter" data-category="design" type="button">
+                        <span class="filter__text">Design</span>
+                        <span class="filter__count">2</span>
+                    </button>
+                    <button class="filter" data-category="development" type="button">
+                        <span class="filter__text">Development</span>
+                        <span class="filter__count">3</span>
+                    </button>
+                </div>
+                <!-- Поле поиска по названию курсов -->
+                <div class="controls__search">
+                    <input type="text" class="search" id="search-input" placeholder="Search course...">
+                    <svg class="search__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                        <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="#9A9CA5" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M14 14L11.1 11.1" stroke="#9A9CA5" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Декоративный элемент слева -->
+            <div class="catalog__decor catalog__decor--left-rectangle" aria-hidden="true"></div>
+            
+            <!-- Контейнер для карточек курсов (заполняется через JavaScript) -->
+            <div class="courses" id="courses-container">
+                <!-- Карточки генерируются динамически через JavaScript -->
+            </div>
+
+            <!-- Кнопка загрузки дополнительных карточек -->
+            <button class="load-more" id="load-more-btn" type="button">
+                <svg class="load-more__icon" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0C1.55228 0 2 0.447715 2 1V5.43632C3.65803 2.20928 7.01998 0 10.9 0C15.2556 0 18.9584 2.78413 20.3307 6.66675C20.5147 7.18747 20.2418 7.75879 19.7211 7.94284C19.2004 8.12689 18.6291 7.85396 18.445 7.33325C17.3463 4.22472 14.3817 2 10.9 2C7.93996 2 5.35365 3.60799 3.96994 6H6.99996C7.55225 6 7.99996 6.44772 7.99996 7C7.99996 7.55228 7.55225 8 6.99996 8H1C0.447715 8 0 7.55228 0 7V1C0 0.447715 0.447715 0 1 0Z" fill="#424551"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.07703 12.0572C2.59775 11.8731 3.16907 12.146 3.35312 12.6668C4.45183 15.7753 7.41647 18 10.8982 18C13.8582 18 16.4445 16.392 17.8282 14H14.7982C14.2459 14 13.7982 13.5523 13.7982 13C13.7982 12.4477 14.2459 12 14.7982 12H20.7981C21.3504 12 21.7981 12.4477 21.7981 13V19C21.7981 19.5523 21.3504 20 20.7981 20C20.2459 20 19.7981 19.5523 19.7981 19V14.5637C18.1401 17.7907 14.7782 20 10.8982 20C6.54254 20 2.83975 17.2159 1.46744 13.3332C1.28339 12.8125 1.55632 12.2412 2.07703 12.0572Z" fill="#424551"/>
+                </svg>
+                <span class="load-more__text">Load more</span>
+            </button>
+        </div>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,17 @@
+{
+  "name": "course-catalog",
+  "version": "1.0.0",
+  "description": "Test task - Course catalog with search and filters",
+  "scripts": {
+    "build": "sass styles/main.scss styles/main.css",
+    "watch": "sass --watch styles/main.scss styles/main.css",
+    "dev": "sass --watch styles/main.scss styles/main.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}
+
