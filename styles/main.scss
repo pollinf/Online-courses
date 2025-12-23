@@ -73,15 +73,6 @@ body {
             pointer-events: none;
         }
 
-        &--squares {
-            width: clamp(72px, 5.84vw, 112px);
-            height: clamp(72px, 5.84vw, 112px);
-            right: clamp(16px, 3.75vw, 72px);
-            bottom: clamp(16px, 2.97vw, 57px);
-            transform: rotate(180deg);
-            transform-origin: top left;
-            pointer-events: none;
-        }
 
         &--left-rectangle {
             width: clamp(50px, 4.32vw, 83px);
@@ -108,18 +99,6 @@ body {
         }
     }
 
-    &__square {
-        width: clamp(18px, 1.46vw, 28px);
-        height: clamp(18px, 1.46vw, 28px);
-        background: $color-decoration;
-        position: absolute;
-        --step: clamp(12px, 0.987vw, 18.95px);
-
-        &:nth-child(1) { right: 0; top: 0; }
-        &:nth-child(2) { right: var(--step); top: var(--step); }
-        &:nth-child(3) { right: calc(var(--step) * 2); top: calc(var(--step) * 2); }
-        &:nth-child(4) { right: calc(var(--step) * 3); top: calc(var(--step) * 3); }
-    }
 }
 
 .controls {

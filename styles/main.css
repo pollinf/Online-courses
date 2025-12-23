@@ -67,15 +67,6 @@ body {
   background: radial-gradient(#FFCF2D 2.78px, transparent 2.78px) 0 0/15.06px 15.06px, radial-gradient(#FFCF2D 2.78px, transparent 2.78px) 7.53px 7.53px/15.06px 15.06px;
   pointer-events: none;
 }
-.catalog__decor--squares {
-  width: clamp(72px, 5.84vw, 112px);
-  height: clamp(72px, 5.84vw, 112px);
-  right: clamp(16px, 3.75vw, 72px);
-  bottom: clamp(16px, 2.97vw, 57px);
-  transform: rotate(180deg);
-  transform-origin: top left;
-  pointer-events: none;
-}
 .catalog__decor--left-rectangle {
   width: clamp(50px, 4.32vw, 83px);
   height: clamp(26px, 2.29vw, 44px);
@@ -97,29 +88,6 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   pointer-events: none;
-}
-.catalog__square {
-  width: clamp(18px, 1.46vw, 28px);
-  height: clamp(18px, 1.46vw, 28px);
-  background: #FFCF2D;
-  position: absolute;
-  --step: clamp(12px, 0.987vw, 18.95px);
-}
-.catalog__square:nth-child(1) {
-  right: 0;
-  top: 0;
-}
-.catalog__square:nth-child(2) {
-  right: var(--step);
-  top: var(--step);
-}
-.catalog__square:nth-child(3) {
-  right: calc(var(--step) * 2);
-  top: calc(var(--step) * 2);
-}
-.catalog__square:nth-child(4) {
-  right: calc(var(--step) * 3);
-  top: calc(var(--step) * 3);
 }
 
 .controls {
